@@ -3,6 +3,19 @@
     padding: 0px;
 }
 
+.primary-title {
+    font-weight: 800;
+    font-size: 2rem;
+    color: #131318;
+}
+
+.primary-description {
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(19, 19, 24, 0.7);
+    margin: 25px 0;
+}
+
 .primary-btn {
     border: 0;
     border-radius: 8px;
@@ -12,7 +25,7 @@
 }
 
 /* header style */
-header {
+body {
     max-width: 1000px;
     margin: 50px auto 100px;
 }
@@ -42,13 +55,14 @@ nav li>a {
     text-decoration: none;
     color: black;
 }
-nav li >a:hover{
+
+nav li>a:hover {
     color: #FF5400;
 }
 
 /* banner style */
 .banner {
-    background-image: linear-gradient(180deg, rgba(19, 19, 24, 0.8) 1.6%, rgba(19, 19, 24, 0) 101.6%), url("../resources/Images/banner.png");
+    background-image: linear-gradient(180deg, rgba(19, 19, 24, 0.8) 1.6%, rgba(19, 19, 24, 0) 101.6%), url("../resources/images/banner.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -98,10 +112,37 @@ select {
 /* Banner style end */
 /* header end  */
 
-/*  */
+/*  popular-tour style */
+.popular-tour-container {
+    display: flex;
+    gap: 50px;
+    margin: 50px 0;
+}
+
+.popular-tour-container div {
+    flex: 1;
+}
+
+.popular-tour-list {
+    padding-left: 20px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 1rem;
+    color: rgba(19, 19, 24, 0.7);
+}
+.popular-tour-list li{
+    margin-bottom: 15px;
+}
+
+.popular-tour-images img {
+    width: 100%;
+    height:auto;
+}
+
+/* popular tour style end */
 /* media query  */
 @media screen and (max-width:576px) {
-    header {
+    body {
         margin: 50px 20px;
     }
 
@@ -110,22 +151,29 @@ select {
         gap: 20px;
         /* align-items: flex-start; */
     }
-    nav ul{
+
+    nav ul {
         gap: 10px;
     }
-    .banner{
+
+    .banner {
         padding: 50px 20px;
     }
+
     .banner-title {
         font-size: 1.8rem;
     }
-    
+
     .banner-description {
         margin: 30px 0;
     }
+
     .banner-search {
         flex-direction: column;
         gap: 15px;
     }
-    
+    .popular-tour-container{
+        flex-direction: column;
+    }
+
 }
